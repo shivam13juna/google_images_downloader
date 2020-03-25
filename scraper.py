@@ -5,7 +5,7 @@ import urllib.request as urllib
 
 import os
 
-searchterm = 'Okocha'#input your search item here
+searchterm = 'liqour receipts'#input your search item here
 url = "https://www.google.co.in/search?q="+searchterm+"&source=lnms&tbm=isch"
 browser = webdriver.Chrome('./chromedriver')#insert path to chromedriver inside parentheses
 browser.get(url)
@@ -27,7 +27,7 @@ print("Total number of images: ", len(imges))
 for i in range(len(imges)):
     print("Processing: ", imges[i])
     try:
-        resource = urllib.urlopen(imges[i], timeout=2) 
+        resource = urllib.urlopen(imges[i], timeout=4) 
     except:
         print("Timed out for: ", imges[i])
         continue
